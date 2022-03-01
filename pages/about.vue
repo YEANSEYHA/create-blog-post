@@ -1,13 +1,16 @@
 <template>
-  <div class="home-page">
+  <div>
     <Header></Header>
-    <h2>Latest Posts</h2>
+      <h1>This is about page.</h1>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+
 }
 </script>
+
+<style>
+
+</style>
