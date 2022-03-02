@@ -6,7 +6,7 @@
     <ul>
       <li v-for="article in articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <img :src="article.img" :alt="article.alt" />
+          <img :src="article.img" width="100px" :alt="article.alt" />
           <div>
             <h2>{{ article.title }}</h2>
             <p>{{ article.description }}</p>
@@ -35,10 +35,13 @@
         articles
       }
     },
-    formatDate(date) {
+    methods:{
+      formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
+    }
+    
   }
 </script>
 

@@ -7,6 +7,6 @@ alt: my first blog post
 author:
   name: Seyha
   bio: All about Benjamin
-  image: https://uploads-ssl.webflow.com/5fd119f0d386feb0ce425af0/5fd119f0d386fede1c425ce4_Author%20in%20Nando%20Blue.png
+  image: https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper.png
   
 ---
