@@ -1,7 +1,7 @@
 <template>
   <article>
     
-    <h1>{{ article.title }}</h1>
+    <h1 class="text-center">{{ article.title }}</h1>
     <p>{{ article.description }}</p>
     <img :src="article.img" :alt="article.alt" width="500px" />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
