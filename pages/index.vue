@@ -1,12 +1,15 @@
 <template>
-  <div class="bg-zinc-300">
-    <Header></Header>
-    <AppSearchInput />
+  <div class="bg-gray-200 ">
+    <div class="flex justify-between p-5 bg-orange-400">
+      <Header></Header>
+      <AppSearchInput />
+    </div>
+    
     <h1 class="text-center" >Blog Posts</h1>
     <br>
     <br>
     <div class="grid lg:grid-cols-3 gap-10">
-      <div class="bg-white-100 rounded overflow-hidden shadow-md" v-for="article of articles" :key="article.slug">
+      <div class="bg-white-100 rounded overflow-hidden shadow-md p-5" v-for="article of articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
           <h2 class="text-center p-5">{{ article.title }}</h2>
           <img class="w-200" :src="article.img"  />

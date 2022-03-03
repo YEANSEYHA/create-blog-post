@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="`/blog/author/${author.name}`">
+    <NuxtLink class="h-full" :to="`/blog/author/${author.name}`">
             <img :src="author.image" width="100px" />
             <div>
                 <h4>Author</h4>

@@ -1,5 +1,10 @@
 <template>
-  <div class="grid lg:grid-cols-2 gap-10 p-10 bg-zinc-300 h-100">
+<div>
+  <div class="flex justify-between p-4 bg-orange-400">
+      <Header></Header>
+      <AppSearchInput />
+  </div>
+  <div class="grid lg:grid-cols-2 gap-10 p-10 bg-zinc-300">
     <div>
       <img :src="article.img" :alt="article.alt" width="600px" />
     </div>
@@ -10,11 +15,16 @@
         <p class="mb-5">Article last updated: {{ formatDate(article.updatedAt) }}</p>
         <author :author="article.author" />
     </div>
-    
+  </div>
+  <div class="p-5">
     <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next" />
-
   </div>
+
+</div>
+
+
+
 </template>
 
 <script>
