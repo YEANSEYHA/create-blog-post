@@ -1,17 +1,20 @@
 <template>
-  <article>
-    
-    <h1 class="text-center">{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" width="500px" />
-    <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-    <nuxt-content :document="article" />
+  <div class="grid lg:grid-cols-2 gap-10 p-10 bg-zinc-300 h-100">
+    <div>
+      <img :src="article.img" :alt="article.alt" width="600px" />
+    </div>
 
-    <author :author="article.author" />
+    <div>
+      <h1 class="text-left mb-10">Title: {{ article.title }}</h1>
+        <p class="mb-5">{{ article.description }}</p>
+        <p class="mb-5">Article last updated: {{ formatDate(article.updatedAt) }}</p>
+        <author :author="article.author" />
+    </div>
     
+    <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next" />
 
-  </article>
+  </div>
 </template>
 
 <script>

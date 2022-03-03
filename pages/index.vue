@@ -5,14 +5,16 @@
     <h1 class="text-center" >Blog Posts</h1>
     <br>
     <br>
-    <div class="grid lg:grid-cols-3 gap-5  ">
-      <div class="" v-for="article of articles" :key="article.slug">
+    <div class="grid lg:grid-cols-3 gap-10">
+      <div class="bg-white-100 rounded overflow-hidden shadow-md" v-for="article of articles" :key="article.slug">
         <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
           <h2 class="text-center p-5">{{ article.title }}</h2>
-          <img class="mx-auto m-5" :src="article.img" width="500px" />
+          <img class="w-200" :src="article.img"  />
           <div>
-            <p class="text-left">{{ article.description }}</p>
-            <p class="text-left mt-5">by {{ article.author.name }}</p>
+            <p class="text-sm ">{{ article.description }}</p>
+            <div class=" bg-secondary-100 text-secondary-200 text-xs uppercase font-bold rounded-full p-2 ml-0 mb-5 ">
+                <span>by {{ article.author.name }}</span>
+            </div>
             
           </div>
         </NuxtLink>

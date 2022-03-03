@@ -1,7 +1,6 @@
 <template>
   <div>
     <input
-      
       v-model="searchQuery"
       type="search"
       autocomplete="off"
