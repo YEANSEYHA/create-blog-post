@@ -25,17 +25,23 @@
 </template>
 
 <script>
+  /* import {mapState, mapGetters, mapActions, mapMutations} from 'vuex' */
   export default {
     async asyncData({ $content, params }) {
       const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'asc')
         .fetch()
-
+        console.log(articles)
       return {
         articles
       }
-    }
+    } 
+
+    /* computed: mapState(['articles']),
+    methods:{
+      ...mapActions(['getArticles'])
+    } */
   }
 </script>
 

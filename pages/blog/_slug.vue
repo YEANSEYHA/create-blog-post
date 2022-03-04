@@ -1,7 +1,7 @@
 <template>
 <div>
   
-  <div class="grid lg:grid-cols-2 gap-10 p-10 bg-zinc-300">
+  <div class="grid gap-10 p-10 bg-zinc-300">
     <div>
       <img :src="article.img" :alt="article.alt" width="600px" />
     </div>
@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  layout: '_slug',
     async asyncData ({ $content, params}){
         const article = await $content('articles', params.slug).fetch()
 
@@ -41,7 +42,7 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }
- }
+ },
     
 }
 </script>
