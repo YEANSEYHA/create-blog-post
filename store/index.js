@@ -4,8 +4,6 @@ import getters from "./getters";
 
 export var state = () => ({
     articles: [],
-    
-    
 });
 
 export default {

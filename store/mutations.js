@@ -1,5 +1,5 @@
 const mutations = {
-    SET_ARTICLE(state, articles) {
+    SET_ARTICLES(state, articles) {
         state.articles = articles;
     }
 };
