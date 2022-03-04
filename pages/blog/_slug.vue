@@ -1,16 +1,13 @@
 <template>
 <div>
-  <div class="flex justify-between p-4 bg-orange-400">
-      <Header></Header>
-      <AppSearchInput />
-  </div>
+  
   <div class="grid lg:grid-cols-2 gap-10 p-10 bg-zinc-300">
     <div>
       <img :src="article.img" :alt="article.alt" width="600px" />
     </div>
 
     <div>
-      <h1 class="text-left mb-10">Title: {{ article.title }}</h1>
+      <h1 class="text-left mb-10 font-serif">Title: {{ article.title }}</h1>
         <p class="mb-5">{{ article.description }}</p>
         <p class="mb-5">Article last updated: {{ formatDate(article.updatedAt) }}</p>
         <author :author="article.author" />

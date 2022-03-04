@@ -1,9 +1,5 @@
 <template>
 <div>
-    <div class="flex justify-between p-5 bg-orange-400">
-      <Header></Header>
-      <AppSearchInput />
-    </div>
     <div class="bg-zinc-300">
         <div class="p-10">
           <h1>Author: {{ articles[0].author.name }}</h1>
