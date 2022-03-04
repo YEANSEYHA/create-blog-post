@@ -1,6 +1,6 @@
 <template>
-  <div class="w-auto bg-gray-700">
-
+  <div class="h-screen bg-gray-200">
+      <Header></Header>
       
       <Nuxt />
   </div>

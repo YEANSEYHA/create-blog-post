@@ -1,13 +1,13 @@
 <template>
 <div>
-    <div class="bg-zinc-300">
+    <div class="bg-gray-200 h-screen">
         <div class="p-10">
           <h1>Author: {{ articles[0].author.name }}</h1>
           <p>Bio: {{ articles[0].author.bio }}</p>
           <h3>Here are a list of articles that have been written by{{ articles[0].author.name }}.</h3>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-10 p-10 bg-zinc-300 h-full">
+        <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 p-10 bg-gray-200 h-full">
         <div v-for="article in articles" :key="article.slug" >
             <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
               <h3 class="p-5">{{ article.title }}</h3>

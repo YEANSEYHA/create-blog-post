@@ -1,7 +1,10 @@
 <template>
-  <div>
-      <h1>This is about page.</h1>
-  </div>
+<div>
+    <Footer>
+      This is the footer page !!!
+    </Footer>
+</div>
+
 </template>
 
 <script>

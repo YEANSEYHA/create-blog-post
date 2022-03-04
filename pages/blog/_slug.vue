@@ -1,7 +1,6 @@
 <template>
-<div>
-  
-  <div class="grid gap-10 p-10 bg-zinc-300">
+<div class="h-full">
+  <div class="h-full grid grid-rows-1 sm:grid-cols-1 xl:grid-cols-2  gap-10 p-10 bg-zinc-300">
     <div>
       <img :src="article.img" :alt="article.alt" width="600px" />
     </div>
@@ -13,7 +12,8 @@
         <author :author="article.author" />
     </div>
   </div>
-  <div class="p-5">
+
+  <div class="p-5 bg-zinc-300">
     <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next" />
   </div>
