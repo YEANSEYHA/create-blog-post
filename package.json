@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@nuxt/image": "^0.6.2",
-    "@nuxtjs/tailwindcss": "^5.0.0-4"
+    "@nuxtjs/tailwindcss": "^5.0.0-4",
+    "@nuxtjs/vuetify": "^1.12.3"
   }
 }

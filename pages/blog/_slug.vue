@@ -19,9 +19,6 @@
   </div>
 
 </div>
-
-
-
 </template>
 
 <script>
@@ -29,7 +26,6 @@ export default {
   layout: '_slug',
     async asyncData ({ $content, params}){
         const article = await $content('articles', params.slug).fetch()
-
         const [prev, next] = await $content('articles')
           .only(['title', 'slug'])
           .sortBy('createdAt', 'asc')
@@ -46,7 +42,6 @@ export default {
     
 }
 </script>
-
 
 <style>
   .nuxt-content h2 {
@@ -68,6 +63,4 @@ export default {
   height: 20px;
   background-size: 20px 20px;
 }
-
-
 </style>
