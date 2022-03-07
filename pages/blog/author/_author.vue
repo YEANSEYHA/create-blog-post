@@ -1,15 +1,11 @@
 <template>
 <div>
-<div class="bg-gray-200 h-screen">
+  <div class="bg-gray-200 h-screen">
         <div class="p-10">
-          <h1>Author: {{ authors[0].author.name }}</h1>
+          <p>Author:: {{authors[0].author.name}}</p>
           <p>Bio: {{ authors[0].author.bio }}</p>
-          
         </div>
-      
     </div>
-
-
 </div>
 
 
