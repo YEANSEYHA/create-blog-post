@@ -9,7 +9,8 @@ const actions = {
           /* console.log(articles) */
         commit("SET_ARTICLES",articles)
         console.log(articles)
-      }
+      },
+
 
 };
 

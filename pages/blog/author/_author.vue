@@ -1,34 +1,36 @@
 <template>
 <div>
-    <div class="bg-gray-200 h-screen">
+<div class="bg-gray-200 h-screen">
         <div class="p-10">
-          <h1>Author: {{ articles[0].author.name }}</h1>
-          <p>Bio: {{ articles[0].author.bio }}</p>
-          <h3>Here are a list of articles that have been written by{{ articles[0].author.name }}.</h3>
+          <h1>Author: {{ authors[0].author.name }}</h1>
+          <p>Bio: {{ authors[0].author.bio }}</p>
+          
         </div>
-
-        <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 p-10 bg-gray-200 h-full">
-        <div v-for="article in articles" :key="article.slug" >
-            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-              <h3 class="p-5">{{ article.title }}</h3>
-              <img :src="article.img" width="250px" :alt="article.alt" />
-              <div>
-                
-                <p>{{ article.description }}</p>
-                <p>{{ formatDate(article.updatedAt) }}</p>
-              </div>
-            </NuxtLink>
-        </div>    
-      </div>
+      
     </div>
+
+
 </div>
 
 
 </template>
 
 <script>
+  import {mapGetters} from "vuex";
   export default {
-    async asyncData({ $content, params }) {
+    computed:{
+      ...mapGetters({
+        authors: "author/authors"
+      })
+    },
+    mounted(){
+      console.log(this.authors)
+    },
+    async asyncData({$content, store, params}){
+      store.dispatch('author/getAuthor')
+    },
+    
+    /* async asyncData({ $content, params }) {
       const articles = await $content('articles', params.slug)
         .where({
           'author.name': {
@@ -42,7 +44,7 @@
       return {
         articles
       }
-    },
+    }, */
     methods:{
       formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
