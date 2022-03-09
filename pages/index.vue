@@ -36,14 +36,7 @@
     }, 
     async asyncData({ $content, params, store }) {
       store.dispatch('article/getArticle')
-      /* const articles = await $content('articles')
-        .only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('createdAt', 'asc')
-        .fetch()
-        console.log(articles)
-      return {
-        articles
-      } */
+
     },
 
   }

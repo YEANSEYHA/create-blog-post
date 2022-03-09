@@ -12,7 +12,7 @@ export const actions = {
         // Filter
         const datas = authors.filter((content) => content.author.name.includes(data))
         commit("GET_AUTHOR", datas)
-    }
+    },
 }
 export const getters = {
     authors(state) {
