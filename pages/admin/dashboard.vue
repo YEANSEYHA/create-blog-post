@@ -60,6 +60,7 @@ const EditableCell = {
   },
 };
 export default {
+  layout: 'antDv',
   components: {
     EditableCell,
   },
@@ -68,15 +69,18 @@ export default {
       dataSource: [
         {
           key: '0',
-          name: 'Edward King 0',
-          age: '32',
-          address: 'London, Park Lane no. 0',
+          name: 'Space Walker',
+          bio: 'This is the bio of this author',
         },
         {
           key: '1',
-          name: 'Edward King 1',
-          age: '32',
-          address: 'London, Park Lane no. 1',
+          name: 'Seyha',
+          bio: 'This is the bio of this author',
+        },
+        {
+          key: '3',
+          name: 'Seyha',
+          bio: 'This is the bio of this author',
         },
       ],
       count: 2,
@@ -88,12 +92,8 @@ export default {
           scopedSlots: { customRender: 'name' },
         },
         {
-          title: 'age',
-          dataIndex: 'age',
-        },
-        {
-          title: 'address',
-          dataIndex: 'address',
+          title: 'Bio',
+          dataIndex: 'bio',
         },
         {
           title: 'operation',
