@@ -3,7 +3,8 @@
       
         <div class="m-4">
           <nuxt-link class=" text-primary" to="/">Home</nuxt-link>
-          <nuxt-link class=" text-primary ml-2" to="about">About</nuxt-link>
+          <nuxt-link class=" text-primary ml-2" to="/about">About</nuxt-link>
+          <nuxt-link class=" text-primary ml-2" to="/admin/dashboard">Dashboard</nuxt-link>
         </div>
 
         <div class="m-4">

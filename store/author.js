@@ -5,7 +5,6 @@ export const actions = {
     async getAuthor({ commit }, data) {
         const authors = await this.$content('articles')
             /* .only(['author', 'slug']) */
-
             .without('body')
             .sortBy('createdAt', 'asc')
             .fetch()
