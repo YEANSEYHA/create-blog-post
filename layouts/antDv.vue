@@ -1,5 +1,6 @@
 <template>
-<div>
+<div class="layout-ant">
+    <HeaderAntdv/>
     <Nuxt/>
 </div>
 </template>
@@ -14,5 +15,8 @@ export default {
 </script>
 
 <style>
-
+.layout-ant{
+    background-color: rgb(17, 235, 198);
+    height: 100vh;
+}
 </style>
