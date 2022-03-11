@@ -24,11 +24,13 @@
 export default {
   layout: '_slug',
     async asyncData ({ $content, params}){
-        const article = await $content('articles', params.slug)
+        const article = await $content('articles', params.slug).fetch()
+        const [prev, next] = await $content('articles')
           .only(['title', 'slug'])
           .sortBy('createdAt', 'asc')
           .surround(params.slug)
           .fetch()
+
         return { article, prev, next };
     },
     methods: {
