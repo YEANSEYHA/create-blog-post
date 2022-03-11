@@ -21,7 +21,7 @@ export default {
 <style scoped>
 header{
     overflow: hidden;
-    background-color: azure;
+    background-color: #ade8f4;
     padding: 10px 10px;
 }
 .sub-header{
@@ -30,8 +30,8 @@ header{
     text-align: center;
     padding: 10px;
     text-decoration: none;
-    font-size: 18px; 
-    line-height: 20px;
+    font-size: 14px; 
+    line-height: 16px;
     border-radius: 4px;
 }
 

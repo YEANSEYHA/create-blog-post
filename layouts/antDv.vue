@@ -16,7 +16,7 @@ export default {
 
 <style>
 .layout-ant{
-    background-color: rgb(17, 235, 198);
+    background-color: #ade8f4;
     height: 100vh;
 }
 </style>
