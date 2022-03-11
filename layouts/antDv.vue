@@ -13,10 +13,9 @@ export default {
     }
 }
 </script>
-
 <style>
 .layout-ant{
-    background-color: #ade8f4;
+    background-color: #e5e5e5;
     height: 100vh;
 }
 </style>

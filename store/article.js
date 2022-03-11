@@ -8,10 +8,9 @@ export const actions = {
           .only(['title', 'description', 'img', 'slug', 'author'])
           .sortBy('createdAt', 'asc')
           .fetch()
-          /* console.log(articles) */
         commit("SET_ARTICLES",articles)
         console.log(articles)
-      }
+    }
 };
 export const getters = {
     articles(state) {
@@ -23,5 +22,3 @@ export const mutations = {
         state.articles = articles;
     }
 };
-
-

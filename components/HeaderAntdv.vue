@@ -9,9 +9,7 @@
         </div>
     </header>
 </div>
-  
 </template>
-
 <script>
 export default {
 
@@ -21,7 +19,7 @@ export default {
 <style scoped>
 header{
     overflow: hidden;
-    background-color: #ade8f4;
+    background-color: #e5e5e5;
     padding: 10px 10px;
 }
 .sub-header{
@@ -34,5 +32,4 @@ header{
     line-height: 16px;
     border-radius: 4px;
 }
-
 </style>

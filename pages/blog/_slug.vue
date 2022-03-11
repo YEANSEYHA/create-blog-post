@@ -17,7 +17,6 @@
     <nuxt-content :document="article"/>
     <prev-next :prev="prev" :next="next" />
   </div>
-
 </div>
 </template>
 
@@ -25,8 +24,7 @@
 export default {
   layout: '_slug',
     async asyncData ({ $content, params}){
-        const article = await $content('articles', params.slug).fetch()
-        const [prev, next] = await $content('articles')
+        const article = await $content('articles', params.slug)
           .only(['title', 'slug'])
           .sortBy('createdAt', 'asc')
           .surround(params.slug)
